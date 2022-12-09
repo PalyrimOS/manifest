@@ -1,36 +1,55 @@
-LineageOS
+PalyrimOS
 ===========
 
 Getting started
 ---------------
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+To get started with PalyrimOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+### Sync ###
+
+
+# Initialize local repository
+```bash
+repo init -u https://github.com/PalyrimOS/manifest.git -b thirteen
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0
+
+# Sync
+```bash
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
-Then to sync up:
+
+### Build ###
+
+
+# Set up environment
+```bash
+. build/envsetup.sh
 ```
-repo sync
+
+# Choose a target
+```bash
+lunch lineage_$device-userdebug
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
+
+# Build the code
+```bash
+mka bacon
+```
 
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
+# Credits:
 
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
+ * [**LineageOS**](https://github.com/LineageOS)
+ * [**ParanoidAndroid**](https://github.com/AOSPA)
+ * [**PixelDust**](https://github.com/PixelDust-Twelve)
+ * [**ProtonAOSP**](https://github.com/ProtonAOSP)
+ * [**BlissROMs**](https://github.com/BlissRoms)
+ * [**crDroid**](https://github.com/crdroidandroid)
+ * [**ArrowOS**](https://github.com/ArrowOS)
+ * [**PixelExperience**](https://github.com/PixelExperience)
+ * [**AICP**](https://github.com/AICP)
+ * [**/RiceDroid**](https://github.com/RiceDroid)
 
-
-Buildbot
---------
-
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+And more

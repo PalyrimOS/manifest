@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+
+  <!-- GitHub -->
+  <remote  name="gh"
+           fetch="https://github.com" />
+
+  <!-- GitLab -->
+  <remote  name="gl"
+           fetch="https://gitlab.com" />
+
+  <!-- GitHub (PalyrimOS) -->
+  <remote  name="palyrim"
+           fetch="https://github.com/PalyrimOS"
+           revision="refs/heads/thirteen" />
+
+  <!-- GitHub (PalyrimOS Devices) -->
+  <remote  name="palyrim-devices"
+           fetch="https://github.com/PalyrimOS-Devices"
+           revision="refs/heads/thirteen" />
+
+
+
+  <!-- Remove repos -->
+  <remove-project name="LineageOS/android_device_lineage_sepolicy" />
+  <remove-project name="LineageOS/android_frameworks_av" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <remove-project name="LineageOS/android_lineage-sdk" />
+  <remove-project name="LineageOS/android_packages_apps_LineageParts" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <remove-project name="LineageOS/android_packages_apps_ThemePicker" />
+  <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
+  <remove-project name="LineageOS/android_packages_apps_Updater" />
+  <remove-project name="LineageOS/android_packages_overlays_Lineage" /> 
+  <remove-project name="LineageOS/android_packages_resources_devicesettings" />
+  <remove-project name="LineageOS/android_system_core" />
+  <remove-project name="LineageOS/android_system_sepolicy" />
+  <remove-project name="LineageOS/android_vendor_lineage" />
+
+  <!-- PalyrimOS repos -->
+  <project path="build/make" name="build" remote="palyrim" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="palyrim" />
+  <project path="frameworks/av" name="frameworks_av" remote="palyrim" />
+  <project path="frameworks/base" name="frameworks_base" remote="palyrim" />
+  <project path="lineage-sdk" name="lineage-sdk" remote="palyrim" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="palyrim" />
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="palyrim" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="palyrim" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="palyrim" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="palyrim" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="palyrim" />
+  <project path="packages/overlays/Lineage" name="packages_overlays_Lineage" remote="palyrim" />
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="palyrim" />
+  <project path="system/core" name="system_core" remote="palyrim" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="palyrim" />
+  <project path="vendor/addons" name="vendor_addons" remote="palyrim" />
+  <project path="vendor/lineage" name="vendor_lineage" remote="palyrim" />
+  <project path="vendor/support" name="vendor_support" remote="palyrim" />
+
+  <!-- Extra repos -->
+  <project path="external/colorkt" name="crdroidandroid/android_external_colorkt" remote="gh" revision="13.0" />
+  <project path="external/faceunlock" name="EvoX/external_faceunlock" remote="gl" revision="tiramisu" />
+  <project path="external/themelib" name="crdroidandroid/android_external_themelib" remote="gh" revision="13.0" />
+  <project path="packages/apps/FaceUnlockService" name="PixelExperience/packages_apps_FaceUnlockService" remote="gh" revision="thirteen" />
+  <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="gh" revision="main" />
+  <project path="vendor/gms" name="PalyrimOS/vendor_gms" remote="gl" revision="tiramisu" />
+
+</manifest>

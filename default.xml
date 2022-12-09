@@ -21,7 +21,7 @@
   <superproject name="platform/superproject" remote="aosp" revision="android-13.0.0_r16" />
   <contactinfo bugurl="go/repo-bug" />
 
-  <!-- AOSP Projects -->
+  <!-- AOSP Projects
 
   <project path="build/make" name="LineageOS/android_build" groups="pdk" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -30,7 +30,7 @@
     <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
-  </project>
+  </project>-->
   <project path="build/bazel" name="platform/build/bazel" groups="pdk" remote="aosp" >
     <linkfile src="bazel.WORKSPACE" dest="WORKSPACE" />
     <linkfile src="bazel.sh" dest="tools/bazel" />
@@ -1134,5 +1134,6 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" remote="aosp" />
 
   <include name="snippets/lineage.xml" />
+  <include name="snippets/palyrim.xml" />
   <include name="snippets/pixel.xml" />
 </manifest>
