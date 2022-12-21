@@ -37,6 +37,7 @@
   <remove-project name="LineageOS/android_system_core" />
   <remove-project name="LineageOS/android_system_sepolicy" />
   <remove-project name="LineageOS/android_vendor_lineage" />
+  <remove-project name="platform/frameworks/libs/systemui" />
 
   <!-- PalyrimOS repos -->
   <project path="build/make" name="build" remote="palyrim" >
@@ -52,6 +53,7 @@
   <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="palyrim" />
   <project path="frameworks/av" name="frameworks_av" remote="palyrim" />
   <project path="frameworks/base" name="frameworks_base" remote="palyrim" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="palyrim" />
   <project path="lineage-sdk" name="lineage-sdk" remote="palyrim" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="palyrim" />
   <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="palyrim" />
