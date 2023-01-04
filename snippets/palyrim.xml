@@ -73,6 +73,6 @@
   <project path="external/themelib" name="crdroidandroid/android_external_themelib" remote="gh" revision="13.0" />
   <project path="packages/apps/FaceUnlockService" name="PixelExperience/packages_apps_FaceUnlockService" remote="gh" revision="thirteen" />
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="gh" revision="main" />
-  <project path="vendor/gms" name="PalyrimOS/vendor_gms" remote="gl" revision="tiramisu" />
+  <project path="vendor/gms" name="EvoX/vendor_gms" remote="gl" revision="tiramisu" />
 
 </manifest>
