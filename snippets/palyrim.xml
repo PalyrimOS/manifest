@@ -19,7 +19,11 @@
   <remote  name="palyrim-devices"
            fetch="https://github.com/PalyrimOS-Devices"
            revision="refs/heads/thirteen" />
-
+  
+  <!-- GitLab (PE) -->
+  <remote  name="pe-gitlab"
+           fetch="https://gitlab.pixelexperience.org/android"
+           revision="thirteen" />
 
 
   <!-- Remove repos -->
@@ -71,7 +75,7 @@
 
   <!-- Extra repos -->
   <project path="external/colorkt" name="crdroidandroid/android_external_colorkt" remote="gh" revision="13.0" />
-  <project path="external/faceunlock" name="EvoX/external_faceunlock" remote="gl" revision="tiramisu" />
+  <project path="external/faceunlock" name="external_faceunlock" revision="thirteen" remote="pe-gitlab" />
   <project path="external/themelib" name="crdroidandroid/android_external_themelib" remote="gh" revision="13.0" />
   <project path="packages/apps/FaceUnlockService" name="PixelExperience/packages_apps_FaceUnlockService" remote="gh" revision="thirteen" />
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="gh" revision="main" />
